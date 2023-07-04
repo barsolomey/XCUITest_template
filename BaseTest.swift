@@ -1,6 +1,6 @@
 //
 //  BaseTest.swift
-//  VeloxDashUITests
+//  Scheme name
 //
 //  Created by Artem Belov on 30.05.2023.
 //
