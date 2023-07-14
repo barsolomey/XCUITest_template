@@ -49,4 +49,11 @@ extension XCUIElement {
             coordinate.press(forDuration: 3)
         }
     }
+
+    /// Assert label partially contains text
+    func assertContains(text: String) {
+        let predicate = NSPredicate(format: "label CONTAINS[c] %@", text)
+        let elementQuery = staticTexts.containing(predicate)
+        XCTAssertTrue(elementQuery.count > 0)
+    }
 }
