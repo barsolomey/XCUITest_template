@@ -17,3 +17,17 @@ class SomeScreen: BaseScreen {
         super.init(app: app, expectedElement: debugButton, file: file, line: line)
     }
 }
+
+// MARK: - Screen elements located here
+private extension SomeScreen {
+    var someElement: XCUIElement {
+        app.staticTexts["Some text"]
+    }
+}
+
+// MARK: - Functions located here
+extension SomeScreen {
+    func checkIfTextExists() {
+        XCTAssert(someElement.exists)
+    }
+}
